@@ -1,0 +1,375 @@
+.delivery-address-container {
+  border-top: 1px solid rgb(231, 231, 231);
+  padding: 15px;
+  margin: 15px;
+}
+
+.delivery-address-description {
+  display: flex;
+  flex-direction: column;
+  color: grey;
+}
+.delivery-address-description .name {
+  margin-bottom: 15px;
+}
+
+.delivery-address-description .address {
+  margin-bottom: 10px;
+}
+
+.delivery-address-container p {
+  color: grey;
+  margin-bottom: 15px;
+  font-weight: bolder;
+}
+
+/* .place-order-btn {
+  border: none;
+  color: white;
+  background-color: var(--primary-color);
+  padding: 12px 36px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 50px;
+}
+
+.place-order-btn:hover {
+  cursor: pointer;
+  background-color: black;
+} */
+
+.processing-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.processing-modal {
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 350px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.wallet-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.spinner {
+  margin: 20px auto;
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #00ff88;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.processing-text {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.wallet-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.wallet-modal {
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 16px;
+  width: auto;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.wallet-desc {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.wallet-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 1rem; /* spacing between wallet cards */
+  margin-bottom: 1.5rem;
+}
+
+.wallet-card {
+  background: #292929;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px; /* prevents stretching issue */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.wallet-card:hover {
+  border-color: #00ff88;
+  transform: translateY(-3px);
+}
+
+.wallet-card.selected {
+  border-color: #00ff88;
+  box-shadow: 0 0 10px #00ff88;
+}
+
+.wallet-logo {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.5rem;
+}
+
+.connect-btn {
+  background: #00ff88;
+  color: black;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s;
+}
+
+.connect-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.connect-btn:hover:not(:disabled) {
+  background: #00e676;
+}
+
+.cancel-btn {
+  background: transparent;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.cancel-btn:hover {
+  color: white;
+}
+
+.wallet-modal.cancel {
+  border: 2px solid #ff4d4f;
+  background: #fff0f0;
+  animation: shake 0.3s;
+}
+
+.cancel-icon {
+  font-size: 3rem;
+  color: #ff4d4f;
+  margin-bottom: 0.5rem;
+  animation: bounce 0.6s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-8px);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+  75% {
+    transform: translateX(-8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.processing-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.processing-modal {
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 16px;
+  width: auto;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.wallet-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 12px;
+  background: #292929;
+  margin-bottom: 1.5rem;
+}
+
+.wallet-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.wallet-address {
+  font-size: 0.85rem;
+  color: #bbb;
+}
+
+.wallet-balance {
+  font-weight: bold;
+  color: #00ff88;
+}
+
+.status-title.success {
+  color: #00ff88;
+}
+
+.status-title.error {
+  color: #ff4d4d;
+}
+
+.spinner {
+  margin: 20px auto;
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #00ff88;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.retry-btn {
+  background: #ff4d4d;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.retry-btn:hover {
+  background: #ff6666;
+}
+
+.timer-text {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.delivery-address-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  color: grey;
+  flex-wrap: wrap;
+}
+
+.place-order-btn {
+  flex: 1;
+  min-width: 200px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+  padding: 0.7em 1.5em;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+.lively-btn.crypto {
+  background: linear-gradient(90deg, #ffb347, #ffcc33);
+  color: #222;
+  box-shadow: 0 2px 8px rgba(255, 204, 51, 0.2);
+  margin-right: 1rem;
+}
+
+.lively-btn.non-crypto {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 198, 255, 0.2);
+}
+
+.place-order-btn:hover,
+.lively-btn.crypto:hover,
+.lively-btn.non-crypto:hover {
+  transform: scale(1.05);
+  filter: brightness(1.08);
+}
